@@ -4,9 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ventas"
+    android:alpha="0.4"
     android:orientation="vertical"
     android:padding="25dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:windowSoftInputMode="adjustNothing|adjustPan">
 
     <TextView
         android:id="@+id/et_emmail"
@@ -15,7 +18,10 @@
         android:text="@string/tv_email"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textSize="20sp" />
+        android:textColor="#000000"
+        android:textColorHint="#F8FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/et_email"
@@ -24,7 +30,8 @@
         android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#FF5722" />
 
     <TextView
         android:id="@+id/et_password"
@@ -34,7 +41,9 @@
         android:text="@string/tv_pass"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textSize="20sp" />
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/et_pass"
@@ -43,7 +52,8 @@
         android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#FF5722" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -70,6 +80,7 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        />
 
 </LinearLayout>
