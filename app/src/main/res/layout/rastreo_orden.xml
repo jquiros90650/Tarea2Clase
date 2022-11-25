@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BCF6E7BE"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="363dp"
+            android:layout_height="390dp"
+            tools:layout_editor_absoluteX="22dp"
+            tools:layout_editor_absoluteY="105dp" />
+
+        <Button
+            android:id="@+id/et_update"
+            android:layout_width="149dp"
+            android:layout_height="56dp"
+            android:text="Enviar direccion"
+            android:textSize="12sp"
+            app:icon="@android:drawable/ic_input_add"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="541dp" />
+
+        <TextView
+            android:id="@+id/et_phone"
+            android:layout_width="406dp"
+            android:layout_height="47dp"
+            android:text="Rastrear  Artículo"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="31dp" />
+
+        <Button
+            android:id="@+id/et_logout"
+            android:layout_width="151dp"
+            android:layout_height="51dp"
+            android:text="Volver"
+            app:icon="@android:drawable/ic_input_delete"
+            tools:layout_editor_absoluteX="244dp"
+            tools:layout_editor_absoluteY="542dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
