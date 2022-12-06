@@ -21,7 +21,7 @@ class ProductoDao {
     }
 
     fun getAllData(): MutableLiveData<List<Producto>> {
-        val listaLugares = MutableLiveData<List<Producto>>()
+        val listaProducto = MutableLiveData<List<Producto>>()
         firestore
             .collection("productos")
             .document(codigoUsuario)
@@ -39,10 +39,10 @@ class ProductoDao {
                             lista.add(producto)
                         }
                     }
-                    listaLugares.value = lista
+                    listaProducto.value = lista
                 }
             }
-        return listaLugares
+        return listaProducto
     }
 
     fun addProducto(producto: Producto){
@@ -71,4 +71,25 @@ class ProductoDao {
                 Log.e("guardarProducto","Error al guardar")
             }
     }
+
+
+
+    fun eliminarProducto(producto: Producto){
+        if (producto.id.isNotEmpty()){
+            firestore
+                .collection("ProductoNovedosos")
+                .document(codigoUsuario)
+                .collection("misProductos")
+                .document(producto.id)
+                .delete()
+                .addOnCompleteListener{
+                    Log.d("eliminarProducto", "Eliminar con exito")
+                }
+                .addOnCanceledListener{
+                    Log.e("eliminarProducto","Error al Eliminar")
+                }
+        }
+    }
+
+
 }

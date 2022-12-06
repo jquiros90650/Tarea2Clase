@@ -5,11 +5,20 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
 
+
+
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.tarea2.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_addProductoFragment"
+            app:destination="@id/addProductoFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_updateProductoFragment"
+            app:destination="@id/updateProductoFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -19,7 +28,46 @@
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.tarea2.ui.slideshow.SlideshowFragment"
+        android:name="com.example.tarea2.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/addProductoFragment"
+        android:name="com.example.tarea2.ui.home.GuardarProductoFragment"
+        android:label="fragment_add_producto"
+        tools:layout="@layout/fragment_guardar_producto" >
+        <action
+            android:id="@+id/action_addProductoFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateProductoFragment"
+        android:name="com.example.tarea2.ui.home.UpdateProductoFragment"
+        android:label="fragment_update_producto"
+        tools:layout="@layout/fragment_update_producto" >
+        <action
+            android:id="@+id/action_updateProductoFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <argument
+            android:name="productoArg"
+            app:argType="com.tarea2.model.Producto" />
+        <action
+            android:id="@+id/action_updateProductoFragment_to_deleteProductoFragment"
+            app:destination="@id/deleteProductoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deleteProductoFragment"
+        android:name="com.example.tarea2.ui.home.EliminarProductoFragment"
+        android:label="fragment_delete_lugar"
+        tools:layout="@layout/fragment_eliminar_producto" >
+        <action
+            android:id="@+id/action_deleteProductoFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <argument
+            android:name="lugarArg"
+            app:argType="com.tarea2.model.Producto" />
+        <action
+            android:id="@+id/action_deleteLugarFragment_to_updateProductoFragment"
+            app:destination="@id/updateProductoFragment" />
+    </fragment>
 </navigation>

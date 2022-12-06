@@ -10,9 +10,12 @@ data class Producto (
     val nombre: String,
     val vendedor: String,
     val precio: String,
-    val email: String,
-    val descripcion: String?
-    ): Parcelable {
-        constructor():
-                this("","","","","","")
+    val descripcion: String,
+    val telefono: String,
+    val correo: String?
+
+): Parcelable {
+
+    constructor():
+                this("","","","","","","")
 }

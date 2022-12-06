@@ -6,9 +6,15 @@ import com.example.tarea2.model.Producto
 
 class ProductoRepository(private val productoDao : ProductoDao) {
 
-    fun addProducto(producto: Producto){
+    fun guardarProducto(producto: Producto){
         productoDao.addProducto(producto)
     }
+    fun eliminarProducto(producto: Producto){
+        productoDao.eliminarProducto(producto)
+    }
+
+
+
 
     val getAllData: MutableLiveData<List<Producto>> = productoDao.getAllData()
 }

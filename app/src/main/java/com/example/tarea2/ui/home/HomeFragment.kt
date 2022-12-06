@@ -7,35 +7,50 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.tarea2.R
+import com.example.tarea2.adapater.ProductoAdapter
 import com.example.tarea2.databinding.FragmentHomeBinding
 import com.example.tarea2.viewmodel.HomeViewModel
 
 class HomeFragment : Fragment() {
 
-private var _binding: FragmentHomeBinding? = null
-  // This property is only valid between onCreateView and
-  // onDestroyView.
-  private val binding get() = _binding!!
+    private var _binding: FragmentHomeBinding? = null
 
-  override fun onCreateView(
-    inflater: LayoutInflater,
-    container: ViewGroup?,
-    savedInstanceState: Bundle?
-  ): View {
-    val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+    private lateinit var homeViewModel: HomeViewModel
 
-    _binding = FragmentHomeBinding.inflate(inflater, container, false)
-    val root: View = binding.root
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-    val textView: TextView = binding.textHome
-    homeViewModel.text.observe(viewLifecycleOwner) {
-      textView.text = it
+
+        binding.btAddProducto.setOnClickListener{
+            findNavController().navigate(R.id.action_nav_home_to_addProductoFragment)
+        }
+
+        // Listado de Producto
+        val productoAdapter = ProductoAdapter()
+        val reciclador = binding.reciclador
+        reciclador.adapter = productoAdapter
+        reciclador.layoutManager = LinearLayoutManager(requireContext())
+
+        homeViewModel.obtenerProducto.observe(viewLifecycleOwner){
+                producto ->productoAdapter.setProducto(producto)
+
+        }
+
+        return binding.root
     }
-    return root
-  }
 
-override fun onDestroyView() {
+    override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
