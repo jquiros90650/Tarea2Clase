@@ -35,11 +35,11 @@ class UpdateProductoFragment : Fragment() {
 
         // carga de Producto
         binding.etNombre.setText(args.productoArg.nombre)
-        binding.etCorreoProducto.setText(args.productoArg.correo)
+        binding.etCorreo.setText(args.productoArg.correo)
         binding.etTelefono.setText(args.productoArg.telefono)
-        binding.etWeb.setText(args.productoArg.web)
+        binding.etEstado.setText(args.productoArg.web)
 
-        binding.btUpdateProducto.setOnClickListener { updateProducto() }
+        binding.btUpdate.setOnClickListener { updateProducto() }
 
 
         // Inflate the layout for this fragment
@@ -48,9 +48,9 @@ class UpdateProductoFragment : Fragment() {
 
     private fun updateProducto() {
         val nombre = binding.etNombre.text.toString()
-        val correo = binding.etCorreoProducto.text.toString()
+        val correo = binding.etCorreo.text.toString()
         val telefono = binding.etTelefono.text.toString()
-        val estadoProducto = binding.etEstadoProducto.text.toString()
+        val estadoProducto = binding.etEstado.text.toString()
         if (nombre.isNotEmpty()) {
             val producto = Producto(args.productoArg.id, nombre, correo, telefono, estadoProducto)
             homeViewModel.guardarProducto(producto)

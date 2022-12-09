@@ -16,7 +16,7 @@
             android:id="@+id/action_nav_home_to_addProductoFragment"
             app:destination="@id/addProductoFragment" />
         <action
-            android:id="@+id/action_nav_home_to_updateProductoFragment"
+            android:id="@+id/action_nav_home_to_UpdateProductoFragment"
             app:destination="@id/updateProductoFragment" />
     </fragment>
 
@@ -52,7 +52,7 @@
             android:name="productoArg"
             app:argType="com.tarea2.model.Producto" />
         <action
-            android:id="@+id/action_updateProductoFragment_to_deleteProductoFragment"
+            android:id="@+id/action_UpdateProductoFragment_to_deleteProductoFragment"
             app:destination="@id/deleteProductoFragment" />
     </fragment>
     <fragment
@@ -64,10 +64,7 @@
             android:id="@+id/action_deleteProductoFragment_to_nav_home"
             app:destination="@id/nav_home" />
         <argument
-            android:name="lugarArg"
-            app:argType="com.tarea2.model.Producto" />
-        <action
-            android:id="@+id/action_deleteLugarFragment_to_updateProductoFragment"
-            app:destination="@id/updateProductoFragment" />
+            android:name="productosArgs"
+            app:argType="com.example.tarea2.model.Producto" />
     </fragment>
 </navigation>

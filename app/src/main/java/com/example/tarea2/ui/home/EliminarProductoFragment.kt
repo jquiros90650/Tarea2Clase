@@ -35,11 +35,11 @@ class EliminarProductoFragment : Fragment() {
 
         // carga de Producto
         binding.etNombre.setText(args.productoArg.nombre)
-        binding..etCorreoProductosetText(args.productoArg.correo)
+        binding.etCorreo.setText(args.productoArg.correo)
         binding.etTelefono.setText(args.productoArg.telefono)
-        binding.etWeb.setText(args.productoArg.web)
+        binding.etEstado.setText(args.productoArg.web)
 
-        binding.btEliminarProducto.setOnClickListener { eliminarProducto() }
+        binding.btDelete.setOnClickListener { eliminarProducto() }
 
         // Inflate the layout for this fragment
 
@@ -49,9 +49,9 @@ class EliminarProductoFragment : Fragment() {
 
     private fun eliminarProducto() {
         val nombre = binding.etNombre.text.toString()
-        val correo = binding.etCorreoProducto.text.toString()
+        val correo = binding.etCorreo.text.toString()
         val telefono = binding.etTelefono.text.toString()
-        val estadoproducto = binding.etEstadoProducto.text.toString()
+        val estadoproducto = binding.etEstado.text.toString()
         if (nombre.isNotEmpty()) {
             val producto = Producto(args.productoArg.id, nombre, correo, telefono, estadoproducto)
             homeViewModel.eliminarProducto(producto)
@@ -60,7 +60,7 @@ class EliminarProductoFragment : Fragment() {
                 getText(R.string.ms_EliminarProducto),
                 Toast.LENGTH_LONG
             ).show()
-            findNavController().navigate(R.id.action_eliminarProductoFragment_to_nav_home)
+            findNavController().navigate(R.id.action_deleteProductoFragment_to_nav_home)
         } else {
             Toast.makeText(requireContext(), getString(R.string.ms_FaltaValores), Toast.LENGTH_LONG)
                 .show()

@@ -13,8 +13,5 @@ class ProductoRepository(private val productoDao : ProductoDao) {
         productoDao.eliminarProducto(producto)
     }
 
-
-
-
     val getAllData: MutableLiveData<List<Producto>> = productoDao.getAllData()
 }

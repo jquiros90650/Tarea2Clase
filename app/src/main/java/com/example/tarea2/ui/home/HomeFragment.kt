@@ -32,19 +32,8 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
 
-        binding.btAddProducto.setOnClickListener{
+        binding.btaddProducto.setOnClickListener{
             findNavController().navigate(R.id.action_nav_home_to_addProductoFragment)
-        }
-
-        // Listado de Producto
-        val productoAdapter = ProductoAdapter()
-        val reciclador = binding.reciclador
-        reciclador.adapter = productoAdapter
-        reciclador.layoutManager = LinearLayoutManager(requireContext())
-
-        homeViewModel.obtenerProducto.observe(viewLifecycleOwner){
-                producto ->productoAdapter.setProducto(producto)
-
         }
 
         return binding.root

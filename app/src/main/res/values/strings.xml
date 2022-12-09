@@ -2,6 +2,9 @@
     <string name="app_name">Ventas Ya</string>
     <string name="tv_email">email</string>
     <string name="tv_pass">password</string>
+    <string name="tv_correo">Correo</string>
+    <string name="tv_clave">Contraseña</string>
+    <string name="tv_nombre">Nombre</string>
     <string name="title_activity_principal">Principal</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -22,7 +25,7 @@
     <string name="ms_AddProducto">Producto Agregado</string>
     <string name="ms_FaltaValores">Faltan Valores</string>
     <string name="ms_UpdateProducto">Producto Modifcado</string>
-    <string name="ms_DeleteProducto">Producto Eliminado</string>
+    <string name="ms_EliminarProducto">Producto Eliminado</string>
 
     <string name="btUpdateProducto">Actualizar Producto</string>
     <string name="btDeleteProducto">Eliminar Producto</string>
