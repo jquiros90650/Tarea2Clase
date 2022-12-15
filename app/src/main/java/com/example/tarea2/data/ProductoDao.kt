@@ -77,7 +77,7 @@ class ProductoDao {
     fun eliminarProducto(producto: Producto){
         if (producto.id.isNotEmpty()){
             firestore
-                .collection("ProductoNovedosos")
+                .collection("productos")
                 .document(codigoUsuario)
                 .collection("misProductos")
                 .document(producto.id)

@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import java.security.Principal
+
 import com.example.tarea2.databinding.ActivityMainBinding
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseUser

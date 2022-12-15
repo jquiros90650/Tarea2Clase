@@ -6,6 +6,9 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tarea2.databinding.ProductosBinding
 import com.example.tarea2.model.Producto
+import com.example.tarea2.ui.home.HomeFragmentDirections
+
+
 
 class ProductoAdapter : RecyclerView.Adapter<ProductoAdapter.ProductoViewHolder>() {
 

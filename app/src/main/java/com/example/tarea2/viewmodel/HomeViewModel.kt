@@ -15,7 +15,7 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
 
     init{
 
-        obtenerProducto = repository.obtenerProducto
+        obtenerProducto = repository.obtenerProductos
     }
 
     fun guardarProducto(producto:Producto){
