@@ -27,6 +27,8 @@
     <string name="ms_UpdateProducto">Producto Modifcado</string>
     <string name="ms_EliminarProducto">Producto Eliminado</string>
 
+    <string name="todo">TODO</string>
+
     <string name="btUpdateProducto">Actualizar Producto</string>
     <string name="btDeleteProducto">Eliminar Producto</string>
 
