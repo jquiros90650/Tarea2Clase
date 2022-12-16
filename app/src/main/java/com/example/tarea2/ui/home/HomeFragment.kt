@@ -36,6 +36,15 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_nav_home_to_GuardarProductoFragment2)
         }
 
+        val productoAdapter = ProductoAdapter()
+        val reciclador = binding.reciclador
+        reciclador.adapter = productoAdapter
+        reciclador.layoutManager = LinearLayoutManager(requireContext())
+
+        homeViewModel.obtenerProductos.observe(viewLifecycleOwner){
+            productoAdapter.setProducto(it)
+        }
+
         return binding.root
     }
 

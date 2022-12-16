@@ -27,12 +27,11 @@ class ProductoAdapter : RecyclerView.Adapter<ProductoAdapter.ProductoViewHolder>
                 itemBinding.tvCosto.text = producto.costo
                 itemBinding.tvEstado.text = producto.estado
                         // Evento enviar Update
-                        itemBinding.vistaFila.setOnClickListener {
+                itemBinding.vistaFila.setOnClickListener {
                             val accion =
-                                HomeFragmentDirections.actionNavHomeToGuardarProductoFragment2()
+                                HomeFragmentDirections.actionNavHomeToUpdateProductoFragment(producto)
                             itemView.findNavController().navigate(accion)
                         }
-
             }
         }
 

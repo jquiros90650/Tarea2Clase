@@ -11,10 +11,9 @@ import com.example.tarea2.repository.ProductoRepository
 
 class HomeViewModel(application: Application) : AndroidViewModel(application) {
     private val repository:ProductoRepository = ProductoRepository(ProductoDao())
-    private val obtenerProductos:MutableLiveData<List<Producto>>
+    val obtenerProductos:MutableLiveData<List<Producto>>
 
     init{
-
         obtenerProductos = repository.obtenerProductos
     }
 
