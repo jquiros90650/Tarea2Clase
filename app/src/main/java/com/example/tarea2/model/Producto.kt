@@ -1,6 +1,7 @@
 package com.example.tarea2.model
 
 import android.os.Parcelable
+import android.provider.ContactsContract.CommonDataKinds.Email
 import kotlinx.parcelize.Parcelize
 
 
@@ -8,9 +9,9 @@ import kotlinx.parcelize.Parcelize
 data class Producto (
     var id: String,
     val nombre: String,
-    val precio: String,
-    val telefono: String,
-    val correo: String?
+    val email: String,
+    val costo: String,
+    val estado: String?
 
 ): Parcelable {
 

@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-
 import com.example.tarea2.R
 import com.example.tarea2.databinding.FragmentUpdateProductoBinding
 import com.example.tarea2.model.Producto
@@ -35,10 +34,10 @@ class UpdateProductoFragment : Fragment() {
 
 
         // carga de Producto
-        binding.etNombre.setText(args.productoArg.nombre)
-        binding.etCorreo.setText(args.productoArg.correo)
-        binding.etTelefono.setText(args.productoArg.telefono)
-        binding.etEstado.setText(args.productoArg.web)
+        binding.etNombre.setText(args.productoArgs.nombre)
+        binding.etCorreo.setText(args.productoArgs.email)
+        binding.etCosto2.setText(args.productoArgs.costo)
+        binding.etEstado.setText(args.productoArgs.estado)
 
         binding.btUpdate.setOnClickListener { updateProducto() }
 
@@ -50,14 +49,14 @@ class UpdateProductoFragment : Fragment() {
     private fun updateProducto() {
         val nombre = binding.etNombre.text.toString()
         val correo = binding.etCorreo.text.toString()
-        val telefono = binding.etTelefono.text.toString()
+        val costo = binding.etCosto2.text.toString()
         val estadoProducto = binding.etEstado.text.toString()
         if (nombre.isNotEmpty()) {
-            val producto = Producto(args.productoArg.id, nombre, correo, telefono, estadoProducto)
+            val producto = Producto(args.productoArgs.id, nombre, correo, costo, estadoProducto)
             homeViewModel.guardarProducto(producto)
             Toast.makeText(requireContext(), getText(R.string.ms_UpdateProducto), Toast.LENGTH_LONG)
                 .show()
-            findNavController().navigate(R.id.action_updateProductoFragment_to_nav_home)
+            findNavController().navigate(R.id.action_UpdateProductoFragment_to_nav_home)
         } else {
             Toast.makeText(requireContext(), getString(R.string.ms_FaltaValores), Toast.LENGTH_LONG)
                 .show()

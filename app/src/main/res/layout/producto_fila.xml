@@ -18,7 +18,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="TextView"
+            android:text="@string/tv_nombre"
             android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -41,21 +41,32 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="TextView"
+            android:text="@string/CorreoProducto"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imagen"
             app:layout_constraintTop_toBottomOf="@+id/tv_nombre" />
 
         <TextView
-            android:id="@+id/tv_telefono"
+            android:id="@+id/tv_costo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="TextView"
+            android:layout_marginTop="12dp"
+            android:text="@string/tv_costo"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/imagen"
             app:layout_constraintTop_toBottomOf="@+id/tv_correo" />
+
+        <TextView
+            android:id="@+id/tv_estado"
+            android:layout_width="275dp"
+            android:layout_height="20dp"
+            android:text="@string/tv_estado"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_costo"
+            tools:layout_editor_absoluteX="116dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

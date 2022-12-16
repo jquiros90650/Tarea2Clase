@@ -56,15 +56,15 @@ class GuardarProductoFragment : Fragment() {
     private fun agregarProducto() {
         val nombre = binding.etNombre.text.toString()
         val correo = binding.etCorreo.text.toString()
-        val telefono = binding.etTelefono.text.toString()
+        val costo = binding.etCosto2.text.toString()
         val estado = binding.etEstado.text.toString()
 
         if (nombre.isNotEmpty()) {
-            val producto = Producto("", nombre, correo, telefono, estado)
+            val producto = Producto("", nombre, correo, costo, estado)
             homeViewModel.guardarProducto(producto)
             Toast.makeText(requireContext(), getText(R.string.ms_AddProducto), Toast.LENGTH_LONG)
                 .show()
-            findNavController().navigate(R.id.action_addProductoFragment_to_nav_home)
+            findNavController().navigate(R.id.action_nav_home_to_GuardarProductoFragment)
         } else {
             Toast.makeText(requireContext(), getText(R.string.ms_FaltaValores), Toast.LENGTH_LONG)
                 .show()

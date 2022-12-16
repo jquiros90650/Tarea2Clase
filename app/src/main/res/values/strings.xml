@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">PRODUCTOS YA</string>
-    <string name="tv_email">email</string>
-    <string name="tv_pass">password</string>
+    <string name="tv_email">Correo</string>
+    <string name="tv_pass">Contraseña</string>
     <string name="tv_correo">Correo</string>
-    <string name="tv_clave">Contraseña</string>
-    <string name="tv_nombre">Nombre</string>
+    <string name="tv_estado">Estado del Producto</string>
+    <string name="tv_nombre">Nombre del producto</string>
+    <string name="tv_costo">Costo del producto</string>
     <string name="title_activity_principal">Principal</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
