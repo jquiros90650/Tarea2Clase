@@ -33,7 +33,7 @@
         tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/addProductoFragment"
-        android:name="com.example.tarea2.ui.home.guardarProductoFragment"
+        android:name="com.example.tarea2.ui.home.GuardarProductoFragment"
         android:label="fragment_add_producto"
         tools:layout="@layout/fragment_guardar_producto" >
         <action
@@ -53,18 +53,18 @@
             app:argType="com.tarea2.model.Producto" />
         <action
             android:id="@+id/action_UpdateProductoFragment_to_deleteProductoFragment"
-            app:destination="@id/deleteProductoFragment" />
+            app:destination="@id/eliminarProductoFragment" />
     </fragment>
     <fragment
-        android:id="@+id/deleteProductoFragment"
+        android:id="@+id/eliminarProductoFragment"
         android:name="com.example.tarea2.ui.home.EliminarProductoFragment"
-        android:label="fragment_delete_lugar"
+        android:label="fragment_delete_producto"
         tools:layout="@layout/fragment_eliminar_producto" >
         <action
-            android:id="@+id/action_deleteProductoFragment_to_nav_home"
+            android:id="@+id/action_eliminarProductoFragment_to_nav_home"
             app:destination="@id/nav_home" />
         <argument
-            android:name="productosArgs"
-            app:argType="com.example.tarea2.model.Producto" />
+            android:name="productoArg"
+            app:argType="com.tarea2.model.Producto" />
     </fragment>
 </navigation>
