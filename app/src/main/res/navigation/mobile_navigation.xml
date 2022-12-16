@@ -10,11 +10,8 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_nav_home_to_GuardarProductoFragment"
-            app:destination="@id/action_nav_home_to_GuardarProductoFragment" />
-        <action
-            android:id="@+id/action_nav_home_to_UpdateProductoFragment"
-            app:destination="@id/UpdateProductoFragment" />
+            android:id="@+id/action_nav_home_to_GuardarProductoFragment2"
+            app:destination="@id/GuardarProductoFragment" />
     </fragment>
 
     <fragment

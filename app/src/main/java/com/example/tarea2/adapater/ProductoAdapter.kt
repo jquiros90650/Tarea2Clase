@@ -29,9 +29,7 @@ class ProductoAdapter : RecyclerView.Adapter<ProductoAdapter.ProductoViewHolder>
                         // Evento enviar Update
                         itemBinding.vistaFila.setOnClickListener {
                             val accion =
-                                HomeFragmentDirections.actionNavHomeToUpdateProductoFragment(
-                                    producto
-                                )
+                                HomeFragmentDirections.actionNavHomeToGuardarProductoFragment2()
                             itemView.findNavController().navigate(accion)
                         }
 

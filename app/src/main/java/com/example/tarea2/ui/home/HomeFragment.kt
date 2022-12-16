@@ -33,7 +33,7 @@ class HomeFragment : Fragment() {
 
 
         binding.btAddPropiedad.setOnClickListener{
-            findNavController().navigate(R.id.action_nav_home_to_GuardarProductoFragment)
+            findNavController().navigate(R.id.action_nav_home_to_GuardarProductoFragment2)
         }
 
         return binding.root
