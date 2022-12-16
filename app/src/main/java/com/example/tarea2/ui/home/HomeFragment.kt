@@ -32,7 +32,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
 
-        binding.btaddProducto.setOnClickListener{
+        binding.btAddPropiedad.setOnClickListener{
             findNavController().navigate(R.id.action_nav_home_to_addProductoFragment)
         }
 

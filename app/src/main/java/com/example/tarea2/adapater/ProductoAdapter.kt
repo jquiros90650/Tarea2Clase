@@ -4,23 +4,24 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.tarea2.databinding.ProductoFilaBinding
 import com.example.tarea2.databinding.ProductosBinding
 import com.example.tarea2.model.Producto
 import com.example.tarea2.ui.home.HomeFragmentDirections
-
+import java.util.Collections.emptyList
 
 
 class ProductoAdapter : RecyclerView.Adapter<ProductoAdapter.ProductoViewHolder>() {
 
         //Lista de Producto
-        private var listaProducto = emptyList<Producto>()
+        private var listaProductos = emptyList<Producto>()
 
         fun setProducto(producto: List<Producto>){
-            listaProducto = producto
+            listaProductos = producto
             notifyDataSetChanged()
         }
 
-        inner class ProductoViewHolder(private val itemBinding: ProductosBinding) : RecyclerView.ViewHolder(itemBinding.root) {
+        inner class ProductoViewHolder(private val itemBinding: ProductoFilaBinding) : RecyclerView.ViewHolder(itemBinding.root) {
             fun dibuja(producto: Producto) {
                 itemBinding.tvNombre.text = producto.nombre
                 itemBinding.tvCorreo.text = producto.correo
@@ -43,20 +44,13 @@ class ProductoAdapter : RecyclerView.Adapter<ProductoAdapter.ProductoViewHolder>
         }
 
         override fun onBindViewHolder(holder: ProductoViewHolder, position: Int) {
-            val producto = listaProducto[position]
+            val producto = listaProductos[position]
             holder.dibuja(producto)
         }
 
         override fun getItemCount(): Int {
-            return listaProducto.size
+            return listaProductos.size
         }
     }
 
 
-
-
-
-
-
-
-}

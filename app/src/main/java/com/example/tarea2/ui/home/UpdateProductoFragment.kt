@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+
 import com.example.tarea2.R
 import com.example.tarea2.databinding.FragmentUpdateProductoBinding
 import com.example.tarea2.model.Producto
@@ -18,11 +19,11 @@ import com.example.tarea2.viewmodel.HomeViewModel
 class UpdateProductoFragment : Fragment() {
 
 // Recuperar los elementos enviados
-    val args by navArgs<UpdateProductoFragmentArgs>()
+    private   val args by navArgs<UpdateProductoFragmentArgs>()
 
-    var _binding: FragmentUpdateProductoBinding? = null
-    val binding get() = _binding!!
-    lateinit var homeViewModel: HomeViewModel
+    private   var _binding: FragmentUpdateProductoBinding? = null
+    private   val binding get() = _binding!!
+    private  lateinit var homeViewModel: HomeViewModel
 
 
     override fun onCreateView(
@@ -66,3 +67,8 @@ class UpdateProductoFragment : Fragment() {
     }
 
 }
+
+
+
+
+

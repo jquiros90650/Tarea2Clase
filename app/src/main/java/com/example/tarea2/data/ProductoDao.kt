@@ -8,6 +8,7 @@ import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
 import com.google.firebase.ktx.Firebase
+import java.util.*
 
 class ProductoDao {
     //Firebase Vars
@@ -20,7 +21,7 @@ class ProductoDao {
         firestore.firestoreSettings = FirebaseFirestoreSettings.Builder().build()
     }
 
-    fun getAllData(): MutableLiveData<List<Producto>> {
+    fun getProductos(): MutableLiveData<List<Producto>> {
         val listaProducto = MutableLiveData<List<Producto>>()
         firestore
             .collection("productos")
@@ -45,7 +46,7 @@ class ProductoDao {
         return listaProducto
     }
 
-    fun addProducto(producto: Producto){
+    fun guardarProducto(producto: Producto){
         val document: DocumentReference
         if(producto.id.isEmpty()){
             //Agregar
@@ -90,6 +91,7 @@ class ProductoDao {
                 }
         }
     }
+
 
 
 }

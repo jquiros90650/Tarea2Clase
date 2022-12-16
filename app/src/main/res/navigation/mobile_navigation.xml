@@ -33,7 +33,7 @@
         tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/addProductoFragment"
-        android:name="com.example.tarea2.ui.home.guardarProductoFragment"
+        android:name="com.example.tarea2.ui.home.GuardarProductoFragment"
         android:label="fragment_add_producto"
         tools:layout="@layout/fragment_guardar_producto" >
         <action

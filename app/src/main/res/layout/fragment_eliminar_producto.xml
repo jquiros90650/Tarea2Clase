@@ -50,12 +50,6 @@
         android:minHeight="48dp" />
 
     <Button
-        android:id="@+id/bt_update"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btDeleteProducto" />
-
-    <Button
         android:id="@+id/bt_delete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

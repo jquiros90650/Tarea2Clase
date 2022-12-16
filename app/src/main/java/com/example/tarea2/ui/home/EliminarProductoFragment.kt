@@ -34,10 +34,10 @@ class EliminarProductoFragment : Fragment() {
 
 
         // carga de Producto
-        binding.etNombre.setText(args.productoArg.nombre)
-        binding.etCorreo.setText(args.productoArg.correo)
-        binding.etTelefono.setText(args.productoArg.telefono)
-        binding.etEstado.setText(args.productoArg.web)
+        binding.etNombre.setText(args.productosArgs.nombre)
+        binding.etCorreo.setText(args.productosArgs.correo)
+        binding.etTelefono.setText(args.productosArgs.telefono)
+        binding.etEstado.setText(args.productosArgs.precio)
 
         binding.btDelete.setOnClickListener { eliminarProducto() }
 
@@ -53,7 +53,7 @@ class EliminarProductoFragment : Fragment() {
         val telefono = binding.etTelefono.text.toString()
         val estadoproducto = binding.etEstado.text.toString()
         if (nombre.isNotEmpty()) {
-            val producto = Producto(args.productoArg.id, nombre, correo, telefono, estadoproducto)
+            val producto = Producto(args.productosArgs.id, nombre, correo, telefono, estadoproducto)
             homeViewModel.eliminarProducto(producto)
             Toast.makeText(
                 requireContext(),
@@ -66,6 +66,6 @@ class EliminarProductoFragment : Fragment() {
                 .show()
         }
 
+    }}
 
-    }
 

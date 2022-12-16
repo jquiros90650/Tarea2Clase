@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ventas Ya</string>
+    <string name="app_name">PRODUCTOS YA</string>
     <string name="tv_email">email</string>
     <string name="tv_pass">password</string>
     <string name="tv_correo">Correo</string>
@@ -19,7 +19,7 @@
 
     <string name="NombreProducto">Nombre del Producto</string>
     <string name="CorreoProducto">Email</string>
-    <string name="TelefonoProducto">Telefono(9999-9999)</string>
+    <string name="TelefonoProducto">Costo del Producto</string>
     <string name="EstadoProducto">Estado del Producto</string>
     <string name="btAddProducto">Agregar Producto</string>
     <string name="ms_AddProducto">Producto Agregado</string>

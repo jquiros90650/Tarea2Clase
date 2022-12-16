@@ -11,11 +11,11 @@ import com.example.tarea2.repository.ProductoRepository
 
 class HomeViewModel(application: Application) : AndroidViewModel(application) {
     private val repository:ProductoRepository = ProductoRepository(ProductoDao())
-    val obtenerProducto:MutableLiveData<List<Producto>>
+    private val obtenerProductos:MutableLiveData<List<Producto>>
 
     init{
 
-        obtenerProducto = repository.obtenerProductos
+        obtenerProductos = repository.obtenerProductos
     }
 
     fun guardarProducto(producto:Producto){
@@ -23,5 +23,5 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
     }
     fun eliminarProducto(producto: Producto){
         repository.eliminarProducto(producto)
-    }
+    }}
 
